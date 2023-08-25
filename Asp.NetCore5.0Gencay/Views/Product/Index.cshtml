@@ -1,0 +1,34 @@
+﻿@* model bazlı çalışma *@
+@*@model List<Asp.NetCore5Gencay.Models.Product>
+
+
+    <ul>
+        @foreach (var item in Model)
+        {
+        <li>@item.ProductName</li>
+        }
+    </ul>*@
+
+<h3>ViewBag </h3>
+<ul>
+    @foreach (var item in ViewBag.products as List<Asp.NetCore5Gencay.Models.Product>)
+    {
+        <li>@item.ProductName</li>
+    }
+</ul>
+
+<h3>ViewData </h3>
+<ul>
+    @foreach (var item in ViewData["products"] as List<Asp.NetCore5Gencay.Models.Product>)
+    {
+        <li>@item.ProductName</li>
+    }
+</ul>
+
+<h3>TempData </h3>
+<ul>
+    @foreach (var item in TempData["products"] as List<Asp.NetCore5Gencay.Models.Product>)
+    {
+        <li>@item.ProductName</li>
+    }
+</ul>
